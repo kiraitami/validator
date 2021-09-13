@@ -5,7 +5,6 @@ import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-
 /**
  * @see updateInputError
  */
@@ -118,7 +117,7 @@ class InputValidator(
      * The last element will respectively trigger both [onEach] and [onLast] call
      *
      */
-    private inline fun <T> List<T>.forEachAndOnLast(onLast: (T) -> Unit, onEach: (T) -> Unit): Unit {
+    private inline fun <T> List<T>.forEachAndOnLast(onLast: (T) -> Unit, onEach: (T) -> Unit) {
         for (index in this.indices) {
             onEach(this[index])
             if (index == this.lastIndex) {

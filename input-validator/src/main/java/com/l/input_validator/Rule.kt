@@ -3,14 +3,13 @@ package com.l.input_validator
 import android.util.Log
 import androidx.annotation.CallSuper
 
-
 /**
  * Classes that inherit from this class can be used as rule for [InputValidator]
  *
  * @param errorMessage text to be displayed as a error in case [validate] returns `false`
  * @property [textToValidate] text that rule validation should be applied to. Given by [validate] from [InputValidator]
  */
-abstract class Rule (val errorMessage: String) {
+abstract class Rule(val errorMessage: String) {
     var textToValidate: String = ""
 
     /**
@@ -34,5 +33,4 @@ abstract class Rule (val errorMessage: String) {
         updateValidText(text)
         return false
     }
-
 }

@@ -67,7 +67,6 @@ class RuleBuilder {
         }
     }
 
-
     fun notBlank(errorMessage: String): RuleBuilder {
         rules.add(NotBlank(errorMessage))
         return this
@@ -98,9 +97,8 @@ class RuleBuilder {
         return this
     }
 
-    fun removeEmoji(replacement: String = "") : RuleBuilder {
+    fun removeEmoji(replacement: String = ""): RuleBuilder {
         rules.add(ReplaceRegex("[^\\p{L}\\p{M}\\p{N}\\p{P}\\p{Z}\\p{Cf}\\p{Cs}\\s]".toRegex(), replacement))
         return this
     }
-
 }
